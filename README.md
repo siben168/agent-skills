@@ -40,6 +40,23 @@ npx skills update -g
 
 ---
 
+## 🔑 凭据准备（直接放项目根目录的 `.env`）
+
+在待部署的 Web 项目根目录下创建 `.env` 文件（请确保加入 `.gitignore`），AI 会**自动扫描并静默读取**，无需在对话中透露敏感信息：
+
+```env
+# 平台连接凭据 (必填)
+CLOUDFLARE_ACCOUNT_ID="你的32位十六进制 Account ID"
+CLOUDFLARE_API_TOKEN="你的 Custom API Token (需 Pages:Edit 权限)"
+
+# 自定义域名与 DNS (使用自定义域名时必填)
+CLOUDFLARE_ZONE_ID="你的32位十六进制 Zone ID (需 DNS:Edit 权限)"
+```
+
+> 💡 **进阶技巧**：如果多个项目使用同一个账号，也可以直接将上述变量写进系统 `~/.bashrc`，在任何新项目中 AI 都能直接免配置读取。
+
+---
+
 ## 💡 如何在对话中调用？（直接对 AI 说）
 
 安装后，你在任何 Web 项目中唤起 AI（无论是 Claude Code 终端、Codex 会话、Cursor 聊天框还是 Antigravity/Gemini），直接发送如下自然语言指令即可触发：
@@ -48,7 +65,7 @@ npx skills update -g
 
 AI 将自动执行：
 1. 探测项目构建产物（`npm run build` 生成 `dist/` 或 `out/`）；
-2. 读取环境变量 `CLOUDFLARE_API_TOKEN` 和 `CLOUDFLARE_ACCOUNT_ID` 进行无头部署；
+2. **自动扫描项目根目录的 `.env` 或系统环境变量**，提取 `CLOUDFLARE_API_TOKEN` 和 `CLOUDFLARE_ACCOUNT_ID` 进行无头部署；
 3. 调用 Cloudflare REST API 挂载自定义域名；
 4. 自动在 Cloudflare DNS 中增量更新 CNAME 解析并开启 CDN 代理加速。
 
