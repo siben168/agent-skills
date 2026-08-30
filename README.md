@@ -46,11 +46,11 @@ npx skills update -g
 
 ```env
 # 平台连接凭据 (必填)
-CLOUDFLARE_ACCOUNT_ID="你的32位十六进制 Account ID"
-CLOUDFLARE_API_TOKEN="你的 Custom API Token (需 Pages:Edit 权限)"
+CLOUDFLARE_ACCOUNT_ID=0123456789abcdef0123456789abcdef
+CLOUDFLARE_API_TOKEN=cf_pat_xxxxxxxxxxxxxxxxxxxxxxxxx
 
 # 自定义域名与 DNS (使用自定义域名时必填)
-CLOUDFLARE_ZONE_ID="你的32位十六进制 Zone ID (需 DNS:Edit 权限)"
+CLOUDFLARE_ZONE_ID=0123456789abcdef0123456789abcdef
 ```
 
 > 💡 **进阶技巧**：如果多个项目使用同一个账号，也可以直接将上述变量写进系统 `~/.bashrc`，在任何新项目中 AI 都能直接免配置读取。

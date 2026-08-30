@@ -54,17 +54,17 @@ AI 执行自动化部署所需的环境变量规范：
 ### 2.2 部署环境变量清单 (`.env`)
 ```env
 # 平台连接凭据 (必填)
-CLOUDFLARE_ACCOUNT_ID="<32位十六进制 Account ID>"
-CLOUDFLARE_API_TOKEN="<具备上述权限的 Custom API Token>"
+CLOUDFLARE_ACCOUNT_ID=0123456789abcdef0123456789abcdef
+CLOUDFLARE_API_TOKEN=cf_pat_xxxxxxxxxxxxxxxxxxxxxxxxx
 
 # 自定义域名与 DNS (使用自定义域名时必填)
-CLOUDFLARE_ZONE_ID="<32位十六进制 Zone ID，位于域名 Overview 页>"
-CUSTOM_DOMAIN="app.yourdomain.com"
+CLOUDFLARE_ZONE_ID=0123456789abcdef0123456789abcdef
+CUSTOM_DOMAIN=app.yourdomain.com
 
 # 项目配置 (可选，有默认值)
-PAGES_PROJECT_NAME="my-web-app"
-PRODUCTION_BRANCH="main"
-COMPATIBILITY_DATE="2026-01-20"
+PAGES_PROJECT_NAME=my-web-app
+PRODUCTION_BRANCH=main
+COMPATIBILITY_DATE=2026-01-20
 ```
 
 ---
