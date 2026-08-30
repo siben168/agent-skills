@@ -23,6 +23,7 @@ description: 通用 Cloudflare Pages 自动化无头部署与自定义域名绑�
 3. **保护敏感信息**：通过 REST API 写入环境变量时，密码、Token、UUID 等必须声明为 `"type": "secret_text"`，绝不能使用明文存储。
 4. **单文件 Worker 必须加 `--no-bundle`**：如果上传的产物本身已经包含打包好的 `_worker.js`，调用 Wrangler 时必须带上 `--no-bundle`，防止 Wrangler 二次编译损坏代码。
 5. **域名绑定两步走**：将自定义域名绑定到 Pages 后，必须同时检查并更新 Cloudflare DNS 的 CNAME 解析，指向 `<project-name>.pages.dev`，并确保 `proxied: true`。
+6. **主动读取 `.env` 凭据**：执行前，AI 应**主动检查项目根目录的 `.env`、`.env.local` 或 `.env.production`** 并从中读取 `CLOUDFLARE_*` 参数。如果已配置，直接调用，不要反复向用户索取；如果不存在，再友好提示用户在 `.env` 中填入凭据（并提醒加入 `.gitignore`）。
 
 ---
 
@@ -158,6 +159,10 @@ fi
 ```javascript
 #!/usr/bin/env node
 import { spawn } from "node:child_process";
+
+// 自动加载本地 .env 或 .env.production 文件（Node.js 原生支持）
+try { process.loadEnvFile?.(); } catch {}
+try { process.loadEnvFile?.(".env.production"); } catch {}
 
 const {
   CLOUDFLARE_ACCOUNT_ID,
