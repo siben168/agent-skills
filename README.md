@@ -10,6 +10,9 @@
 | 技能名称 | 目录链接 | 简介 | 核心适用场景 |
 |---|---|---|---|
 | **cloudflare-pages-deploy** | [查看技能文档](skills/cloudflare-pages-deploy/SKILL.md) | Cloudflare Pages 通用自动化无头部署、环境变量/Secret 注入与自定义域名/DNS CNAME 自动热切换指南 | 任何 Web 前端、全栈应用快速上线 Cloudflare 并绑定自定义域名 |
+| **agile-docs**（初稿） | [查看技能文档](skills/agile-docs/SKILL.md) | 轻量敏捷文档协作：需求与设计分工、任务台账、事实单一来源与持续演进 | 项目文档建设、需求推进、跨会话交接与文档治理 |
+
+`agile-docs` 的基础规则已整理，具体模板将逐项讨论后补充；维护进度见 [设计共识与模板讨论计划](docs/agile-docs-design.md)。尚未完成跨项目和跨工具行为验证。
 
 ---
 
