@@ -12,7 +12,7 @@
 | **cloudflare-pages-deploy** | [查看技能文档](skills/cloudflare-pages-deploy/SKILL.md) | Cloudflare Pages 通用自动化无头部署、环境变量/Secret 注入与自定义域名/DNS CNAME 自动热切换指南 | 任何 Web 前端、全栈应用快速上线 Cloudflare 并绑定自定义域名 |
 | **agile-docs**（初稿） | [查看技能文档](skills/agile-docs/SKILL.md) | 轻量敏捷文档协作：需求与设计分工、任务台账、事实单一来源与持续演进 | 项目文档建设、需求推进、跨会话交接与文档治理 |
 
-`agile-docs` 的基础规则与模板讨论已完成，PRD、ADR、GD、任务台账及研究归档规则已纳入技能包；维护进度见 [设计共识与模板讨论计划](docs/agile-docs-design.md)。已完成一次[入口维护场景试用](docs/agile-docs/scenario-trials.md)；完整模板产出、任务接续及跨项目、跨工具行为仍待验证。
+`agile-docs` 的基础规则与模板讨论已完成，PRD、ADR、GD、任务台账及研究归档规则已纳入技能包；维护进度见 [设计共识与模板讨论计划](docs/agile-docs-design.md)。已完成[入口维护与真实台账重整](docs/agile-docs/scenario-trials.md)，并澄清来源冲突处理；实际跨会话推进、完整模板及跨项目、跨工具行为仍待验证。
 
 ---
 
