@@ -1,6 +1,6 @@
 # agile-docs 设计共识与模板讨论计划
 
-状态：基础规则、PRD、ADR 与任务台账模板已确认；正在讨论 Guide / Runbook，其余模板和跨项目/跨工具试用尚未完成。
+状态：基础规则、PRD、ADR 与任务台账模板已确认；Guide / Runbook 的分类与编号已确认，整体模板待最终确认；研究与归档提案已整理，跨项目/跨工具试用尚未完成。
 
 本文件面向技能维护者，保存已确认的设计边界和后续讨论入口，不属于运行时技能包。运行规则以 [SKILL.md](../skills/agile-docs/SKILL.md) 及其按需引用为准，不在此复制另一份规则正文。
 
@@ -27,7 +27,8 @@
 已有：技能入口、台账内容与维护规则、演进回流规则、仓库目录入口，以及已确认的 [PRD](../skills/agile-docs/references/prd.md) 与 [ADR](../skills/agile-docs/references/adr.md) 写作规则、模板和案例。
 
 已确认的 [任务台账规则、模板与案例](../skills/agile-docs/references/task-ledgers.md) 已纳入技能包，维护资料保留讨论结论。
-当前讨论：[Guide / Runbook 模板提案](agile-docs/guide-review.md)，附基础模板和通用案例，尚未纳入可分发模板。已确认资源不在维护资料中重复保存。
+待收尾：[Guide / Runbook 模板提案](agile-docs/guide-review.md)，附基础模板和通用案例，尚未纳入可分发模板。
+当前讨论：[研究材料与归档提案](agile-docs/research-archive-review.md)，建议只补按需规则，不新增强制模板或正式文档类型。已确认资源不在维护资料中重复保存。
 后续按下表逐项讨论。未设置硬性字数/行数阈值，未引入专用工具依赖或自动治理脚本。
 已纳入技能包的资源可用于试用，但不据此宣称已完成跨项目或跨工具行为验证。
 
