@@ -6,7 +6,7 @@
 
 | 技能 | 适用任务 | 安装版本 | 使用说明 |
 |---|---|---|---|
-| **agile-docs** | PRD、架构与实现设计、任务台账、文档一致性与归档 | [agile-docs-v0.1.0](https://github.com/siben168/agent-skills/releases/tag/agile-docs-v0.1.0) | [日常文档协作](#agile-docs) · [技能源码](skills/agile-docs/SKILL.md) |
+| **agile-docs** | PRD、架构与实现设计、任务台账、文档一致性与归档 | [agile-docs-v0.1.1](https://github.com/siben168/agent-skills/releases/tag/agile-docs-v0.1.1) | [日常文档协作](#agile-docs) · [技能源码](skills/agile-docs/SKILL.md) |
 | **cloudflare-pages-deploy** | Cloudflare Pages 部署、自定义域名与 DNS 配置 | 尚无独立发布版，安装时固定 main 对应的具体提交 | [部署使用](#cloudflare-pages-deploy) · [技能源码](skills/cloudflare-pages-deploy/SKILL.md) |
 
 ## 复制给 AI，完成安装（推荐）
@@ -15,7 +15,7 @@
 
 ```text
 请从 https://github.com/siben168/agent-skills 为当前 AI 工具安装以下两个技能：
-- skills/agile-docs：固定使用标签 agile-docs-v0.1.0。
+- skills/agile-docs：固定使用标签 agile-docs-v0.1.1。
 - skills/cloudflare-pages-deploy：解析 main 当前的具体提交 SHA，并固定到该提交。
 如果是 Codex，使用 skill-installer；其他工具采用其支持的技能安装方式。
 请安装各自的完整目录，包括其中的参考和模板；已有安装时先检查版本及本地修改，避免直接覆盖。
@@ -25,7 +25,7 @@
 ### 只安装 agile-docs
 
 ```text
-请从 siben168/agent-skills 安装 skills/agile-docs，固定使用 agile-docs-v0.1.0。
+请从 siben168/agent-skills 安装 skills/agile-docs，固定使用 agile-docs-v0.1.1。
 如果是 Codex，使用 skill-installer；其他工具采用其支持的技能安装方式。
 安装完整技能目录；已有安装时先检查版本及本地修改。完成后报告安装位置、版本及识别结果。
 ```
@@ -137,5 +137,7 @@ agile-docs 的详细判断门槛见其 [演进与回流规则](skills/agile-docs
 每个技能只安装自身的 `skills/<技能名>/` 完整目录。`SKILL.md` 是入口，目录中已有的参考、模板和脚本也应一起安装；仓库级 README 和 `docs/` 用于使用说明与维护，不作为运行时必读材料。
 
 agile-docs v0.1.0 包含 16 个运行时文件、122 行入口，已完成来源项目全量文档治理及 Codex 本地显式调用回归，运行时与候选 `agile-docs-v0.1.0-rc.1` 一致。其自动触发、跨项目、跨工具及长期维护收益尚未验证；这些验证结论也不代表 cloudflare-pages-deploy 的验证状态。
+
+当前 v0.1.1 保持 16 个运行时文件，入口 123 行；仅澄清主子项目知识归属、编号管理范围及跨体系引用，进行了维护者情境复核。v0.1.0 的安装调用验证不等于新版的独立行为回归，具体限制见场景试用。
 
 agile-docs 维护依据：[设计共识](docs/agile-docs-design.md) · [场景试用与限制](docs/agile-docs/scenario-trials.md)。
